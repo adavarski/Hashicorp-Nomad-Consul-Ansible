@@ -38,11 +38,17 @@ check nomad status
 Examples:
 
 [vagrant@node-2 vagrant]$ nomad server members
+
 Name          Address        Port  Status  Leader  Protocol  Build  Datacenter  Region
+
 node1.global  192.168.50.10  4648  alive   true    2         0.8.6  dc1         global
+
 [vagrant@node-2 vagrant]$ nomad node status
+
 ID        DC   Name   Class   Drain  Eligibility  Status
+
 4ed78222  dc1  node3  <none>  false  eligible     ready
+    
 8b9fbcc4  dc1  node2  <none>  false  eligible     ready
     
 
