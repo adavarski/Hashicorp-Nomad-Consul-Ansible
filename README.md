@@ -1,5 +1,9 @@
 # Deploy Nomad & Consult via ansible, on Centos nodes #
 
+ENV: Ubuntu 18.04 with virtualbox, vagrant, ansible
+
+NOTE: vagrant plugin install vagrant-vbguest
+
 ## What you will get? ###
 
 * Setup a 3 nodes (1 server, 2 clients) hashicorp nomad container orchestrator
@@ -8,7 +12,7 @@
 
 ## Architecture of the stack
 
-![nomad.PNG](https://github.com/gregbkr/nomad-consult-ansible-centos/raw/master/nomad.PNG)
+![nomad.PNG](https://github.com/adavarski/Hashicorp-Nomad-Consul-Ansible/raw/master/nomad.PNG)
 
 - **Master/client nomad host**: master will take care of electing cluster leader, planning and rescheduling nomad jobs. While client will report node status to the master and look for jobs to run, and then run container
 - **Consul**: service discovery. Nomad will record nodes, services in this database. Consul is replicated and  present on all nodes so nomad agents always have access to this data locally
@@ -24,7 +28,7 @@
 
 Clone this repo
 
-    git clone https://github.com/gregbkr/nomad-consult-ansible-centos && cd nomad
+    git clone https://github.com/adavarski/Hashicorp-Nomad-Consul-Ansible && cd nomad
 
 Please deploy 3 standard Centos hosts (nomad-server1, nomad-client1, nomad-client2) on your prefered cloud provider.
 
