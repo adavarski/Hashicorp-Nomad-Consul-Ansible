@@ -50,6 +50,19 @@ ID        DC   Name   Class   Drain  Eligibility  Status
 4ed78222  dc1  node3  <none>  false  eligible     ready
     
 8b9fbcc4  dc1  node2  <none>  false  eligible     ready
+
+```
+Example:
+
+[vagrant@node-3 jobs]$ echo 'PING' | nc global-redis-check.service.consul 6379
++PONG
+[vagrant@node-3 jobs]$ curl global-flask-check.service.consul:5000
+Hello World! I have been seen 3 times
+
+[vagrant@node-3 jobs]$ curl global-nginx-check.service.consul
+Hello World! I have been seen 4 times.
+```
+    
     
 
 
