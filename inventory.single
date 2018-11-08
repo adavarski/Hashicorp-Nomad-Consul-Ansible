@@ -1,0 +1,9 @@
+# Vagrant hosts
+node1 ansible_host=192.168.50.10 ansible_ssh_host=192.168.50.10 ansible_user=vagrant ansible_ssh_common_args='-o StrictHostKeyChecking=no' ansible_ssh_private_key_file='.vagrant/machines/node1/virtualbox/private_key' consul_bootstrap=true
+
+[server]
+node1
+
+[client]
+node1
+
