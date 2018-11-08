@@ -9,13 +9,16 @@ vagrant up
 Change consul and nomad versions to latest (sep 2018)
 
 $ grep version ansible-role-consul/defaults/main.yml 
-consul_version: 1.3.0
-consul_webui_version: 1.3.0
-$ grep version ansible-role-nomad/defaults/main.yml 
-nomad_version: 0.8.6
-davar@home ~/LABS/nomad-consult-ansible $ 
 
-ansible-playbook -i ./inventory playbook.yml
+consul_version: 1.3.0
+
+consul_webui_version: 1.3.0
+
+$ grep version ansible-role-nomad/defaults/main.yml 
+
+nomad_version: 0.8.6
+
+$ ansible-playbook -i ./inventory playbook.yml
 
 for node2-3 : sudo usermod -aG docker vagrant ; exit; 
 
