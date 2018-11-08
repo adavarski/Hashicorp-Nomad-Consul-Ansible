@@ -35,24 +35,16 @@ check nomad status
     nomad nomad server members
     nomad status redis  
 
+```
 Examples:
 
 [vagrant@node-2 vagrant]$ nomad server members
-
 Name          Address        Port  Status  Leader  Protocol  Build  Datacenter  Region
-
 node1.global  192.168.50.10  4648  alive   true    2         0.8.6  dc1         global
-
-[vagrant@node-2 vagrant]$ nomad node status
-
+[vagrant@node-3 jobs]$ nomad node status
 ID        DC   Name   Class   Drain  Eligibility  Status
-
 4ed78222  dc1  node3  <none>  false  eligible     ready
-    
-8b9fbcc4  dc1  node2  <none>  false  eligible     ready
-
-```
-Example:
+8b9fbcc4  dc1  node2  <none>  false  eligible     read
 
 [vagrant@node-3 jobs]$ echo 'PING' | nc global-redis-check.service.consul 6379
 +PONG
@@ -62,8 +54,7 @@ Hello World! I have been seen 3 times
 [vagrant@node-3 jobs]$ curl global-nginx-check.service.consul
 Hello World! I have been seen 4 times.
 ```
-    
-    
+ 
 
 
 # Deploy Nomad & Consult via ansible, on Centos nodes on your prefered cloud provider via ansible#
